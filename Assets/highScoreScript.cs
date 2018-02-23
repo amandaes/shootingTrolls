@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scoreScript : MonoBehaviour
+public class highScoreScript : MonoBehaviour
 {
 
-    Text _myText;
+    Text theText;
 
     // Use this for initialization
     void Start()
     {
-        _myText = GetComponent<Text>();
+        theText = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _myText.text = "Score: " + GameManager.instance.score;
+        theText.text = "Score: " + GameManager.instance.score;
     }
 }
