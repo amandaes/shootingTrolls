@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject); // THERE CAN BE ONLY ONE!
         }
 
-        string fullFilePath = Application.persistentDataPath + Path.DirectorySeparatorChar + "SaveData.txt";
+        string fullFilePath = Application.persistentDataPath + Path.DirectorySeparatorChar + "SaveScore.txt";
         if (File.Exists(fullFilePath))
         {
             string highScoreString = File.ReadAllText(fullFilePath);
@@ -41,15 +41,11 @@ public class GameManager : MonoBehaviour
         {
             highScore = score;
 
-            string fullFilePath = Application.dataPath + Path.DirectorySeparatorChar + "SaveData.txt";
+            string fullFilePath = Application.dataPath + Path.DirectorySeparatorChar + "SaveScore.txt";
             File.WriteAllText(fullFilePath, highScore.ToString());
         }
         SceneManager.LoadScene(2);
 
-        if (Input.anyKeyDown)
-        {
-            SceneManager.LoadScene("PlayScene");
-        }
     }
 }
 

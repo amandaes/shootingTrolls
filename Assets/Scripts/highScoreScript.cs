@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class highScoreScript2 : MonoBehaviour
+public class highScoreScript : MonoBehaviour
 {
 
     Text theText;
@@ -17,6 +17,6 @@ public class highScoreScript2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        theText.text = " High Score: " + GameManager.instance.highScore;
+        theText.text = "Score: " + GameManager.instance.score + " \n High Score: " + GameManager.instance.highScore;
     }
 }
